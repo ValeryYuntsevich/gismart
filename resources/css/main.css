@@ -1,0 +1,62 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.container {
+  padding: 2em 2em;
+  display:grid;
+  grid-template-rows: 35vh 10vh;
+  grid-gap: 5em;
+  height: 100vh;
+}
+
+.chart {
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(calc(100% / 12 - 1em), calc(100% / 12 - 1em)));
+  grid-gap:0.5em;
+  justify-content:center;
+  align-items: end;
+}
+
+.month {
+  background: #16A085;
+}
+
+.sort-by {
+  display: grid;
+  grid-template-columns: 0.5fr 5fr 0.5fr;
+  justify-items: center;
+  justify-self: center;
+}
+
+.sort-by > span {
+  padding: 0 2em;
+  align-self: center;
+}
+
+.btn {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 0.5em 0.8em;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.title {
+  display: block;
+  text-align: center;
+  color: brown;
+  font-size: 0.7rem;
+  opacity: 0;
+}
+
+.btn--disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
